@@ -3,8 +3,8 @@ class Atm:
         self.__pin = "1234"
         self.__balance = 0
 
-        self.menu()
-    def menu(self):
+        self.__menu()
+    def __menu(self):
         user_input = input("""
         Hello, how would you like to proceed?
         1. Enter 1 to create pin
@@ -54,3 +54,4 @@ class Atm:
             print("Invalid pin")
 
 sbi = Atm()
+sbi.
