@@ -1,7 +1,7 @@
 class Atm:
     def __init__(self):
-        self.pin = "1234"
-        self.balance = 0
+        self.__pin = "1234"
+        self.__balance = 0
 
         self.menu()
     def menu(self):
@@ -52,4 +52,5 @@ class Atm:
             print("Your current balance is",self.balance)
         else:
             print("Invalid pin")
+
 sbi = Atm()
