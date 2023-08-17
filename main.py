@@ -24,23 +24,23 @@ class Atm:
         elif user_input == '5':
             print('Exit')
     def create_pin(self):
-        self.pin = input("Enter your pin:")
+        self.__pin = input("Enter your pin:")
         print("pin set successfully!")
 
     def deposit(self):
          temp = input("Enter your pin:")
-         if temp == self.pin:
+         if temp == self.__pin:
              amount = int(input("Enter the amount"))
-             self.balance = self.balance + amount
+             self.__balance = self.__balance + amount
              print("Deposit successful")
          else:
              print("Invalid pin!")
     def withdraw(self):
         temp = input("Enter your pin")
-        if temp == self.pin:
+        if temp == self.__pin:
             amount = int(input("Enter the amount:"))
-            if amount < self.balance:
-                self.balance = self.balance - amount
+            if amount < self.__balance:
+                self.__balance = self.__balance - amount
                 print("Withdraw successful")
             else:
                 print("Insufficient balance!")
@@ -48,7 +48,7 @@ class Atm:
             print("Invalid pin!")
     def balance(self):
         temp = input("Enter your pin:")
-        if temp == self.pin:
+        if temp == self.__pin:
             print("Your current balance is",self.balance)
         else:
             print("Invalid pin")
